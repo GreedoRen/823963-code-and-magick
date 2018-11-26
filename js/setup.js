@@ -7,8 +7,7 @@ document.querySelector('.setup-similar').classList.remove('hidden');
 
 var similarListElement = document.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
-    .content
-    .querySelector('.setup-similar-item');
+    .content;
 
 var WIZARD_FIRSTNAMES = [
   'Иван',
@@ -49,32 +48,15 @@ var randomIndex = function (minIndex, maxIndex) {
   return Math.floor(Math.random() * (maxIndex - minIndex + 1) + minIndex);
 };
 
-var similarWizards = [
-  {
+var similarWizards = [];
+for (var i = 0; i < 4; i++) {
+  similarWizards.push({
     firstname: WIZARD_FIRSTNAMES[randomIndex(0, 7)],
     secondname: WIZARD_SECONDNAMES[randomIndex(0, 7)],
     coatColor: COAT_COLOR[randomIndex(0, 5)],
     eyesColor: EYES_COLOR[randomIndex(0, 4)]
-  },
-  {
-    firstname: WIZARD_FIRSTNAMES[randomIndex(0, 7)],
-    secondname: WIZARD_SECONDNAMES[randomIndex(0, 7)],
-    coatColor: COAT_COLOR[randomIndex(0, 5)],
-    eyesColor: EYES_COLOR[randomIndex(0, 4)]
-  },
-  {
-    firstname: WIZARD_FIRSTNAMES[randomIndex(0, 7)],
-    secondname: WIZARD_SECONDNAMES[randomIndex(0, 7)],
-    coatColor: COAT_COLOR[randomIndex(0, 5)],
-    eyesColor: EYES_COLOR[randomIndex(0, 4)]
-  },
-  {
-    firstname: WIZARD_FIRSTNAMES[randomIndex(0, 7)],
-    secondname: WIZARD_SECONDNAMES[randomIndex(0, 7)],
-    coatColor: COAT_COLOR[randomIndex(0, 5)],
-    eyesColor: EYES_COLOR[randomIndex(0, 4)]
-  }
-];
+  });
+}
 
 var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
