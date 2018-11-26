@@ -10,14 +10,6 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template')
     .content
     .querySelector('.setup-similar-item');
 
-// var getRandomInteger = function (min, max) {
-//   return Math.floor(Math.random() * (max - min + 1) + min);
-// };
-
-// var getRandomArrayElement = function (arr) {
-//   return arr[getRandomInteger(0, arr.length - 1)];
-// };
-
 var WIZARD_FIRSTNAMES = [
   'Иван',
   'Хуан Себастьян',
@@ -99,40 +91,3 @@ for (var i = 0; i < similarWizards.length; i++) {
   fragment.appendChild(renderWizard(similarWizards[i]));
 }
 similarListElement.appendChild(fragment);
-
-// function randomValue(random) {
-//   return random[Math.floor(Math.random() * random.length)];
-// }
-
-// function getRandomWizard() {
-//   return {
-//     name: randomValue(WIZARD_FIRSTNAMES) + ' ' + randomValue(WIZARD_SECONDNAMES),
-//     coatColor: randomValue(coatColor),
-//     eyesColor: randomValue(eyesColor),
-//   };
-// }
-
-// function getRandomWizardList(count) {
-//   var results = [];
-
-//   for (var i = 0; i < count; i++) {
-//     results.push(getRandomWizard());
-//   }
-
-//   return results;
-// }
-// var wizardNames = Math.floor(Math.random() * WIZARD_FIRSTNAMES.length);
-
-// var wizard = new wizardPlayer(WIZARD_FIRSTNAMES[wizardNames], WIZARD_SECONDNAMES, coatColor, eyesColor);
-
-// WIZARD_FIRSTNAMES.splice(wizardNames, 1);
-
-// for (var i = 0; i < 4; i++) {
-//   var wizardElement = similarWizardTemplate.cloneNode(true);
-
-//   wizardElement.querySelector('.setup-similar-label').textContent = WIZARD_FIRSTNAMES[wizardNames] + WIZARD_SECONDNAMES;
-//   wizardElement.querySelector('.wizard-coat').style.fill = coatColor[i];
-//   wizardElement.querySelector('.wizard-eyes').style.fill = eyesColor[i];
-
-//   similarListElement.appendChild(wizardElement);
-// }
