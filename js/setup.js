@@ -69,7 +69,7 @@ var renderWizard = function (wizard) {
 };
 
 var fragment = document.createDocumentFragment();
-for (var i = 0; i < similarWizards.length; i++) {
-  fragment.appendChild(renderWizard(similarWizards[i]));
+for (var j = 0; j < similarWizards.length; j++) {
+  fragment.appendChild(renderWizard(similarWizards[j]));
 }
 similarListElement.appendChild(fragment);
