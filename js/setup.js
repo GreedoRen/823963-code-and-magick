@@ -145,7 +145,7 @@ var wizardChangeColor = function (wizardColor, color) {
 };
 
 var inputCoatColor = document.querySelector('input[name=coat-color]');
-var inputEyeColor = document.querySelector('input[name=eye-color]');
+var inputEyeColor = document.querySelector('input[name=eyes-color]');
 var inputFireballColor = document.querySelector('input[name=fireball-color]');
 
 wizardCoat.addEventListener('click', function () {
